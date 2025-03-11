@@ -354,10 +354,10 @@ private:
 			send_timesync_msg(0, ros::Time::now().toNSec());
 		} else if (ts_mode == TSM::ONBOARD) {
 			// Calculate offset between CLOCK_REALTIME (ros::WallTime) and CLOCK_MONOTONIC
-			uint64_t realtime_now_ns = ros::Time::now().toNSec();
+			uint64_t realros_ros_time_now_ns = ros::Time::now().toNSec();
 			uint64_t monotonic_now_ns = get_monotonic_now();
 
-			add_timesync_observation(realtime_now_ns - monotonic_now_ns, realtime_now_ns, monotonic_now_ns);
+			add_timesync_observation(realros_ros_time_now_ns - monotonic_now_ns, realros_ros_time_now_ns, monotonic_now_ns);
 		}
 	}
 

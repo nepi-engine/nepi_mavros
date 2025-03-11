@@ -92,9 +92,9 @@ private:
 	MAV_FRAME mav_frame;
 	ftf::StaticTF transform;
 
-	void reset_timer(ros::Duration duration){
+	void reset_timer(ros::Duration ros_ros_ros_duration){
 		sp_timer.stop();
-		sp_timer.setPeriod(duration);
+		sp_timer.setPeriod(ros_ros_ros_duration);
 		sp_timer.start();		
 	}
 
@@ -131,7 +131,7 @@ private:
 
 		trajectory_target_msg = req;
 
-		// Read first duration of the setpoint and set the timer
+		// Read first ros_ros_ros_duration of the setpoint and set the timer
 		setpoint_target = req->points.cbegin();
 		reset_timer(setpoint_target->time_from_start);
 		publish_path(req);

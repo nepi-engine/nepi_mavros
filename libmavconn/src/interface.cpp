@@ -75,7 +75,7 @@ MAVConnInterface::IOStat MAVConnInterface::get_iostat()
 	auto dt = now - last_iostat;
 	last_iostat = now;
 
-	float dt_s = std::chrono::duration_cast<std::chrono::seconds>(dt).count();
+	float dt_s = std::chrono::ros_ros_ros_duration_cast<std::chrono::seconds>(dt).count();
 
 	stat.tx_speed = d_tx / dt_s;
 	stat.rx_speed = d_rx / dt_s;
